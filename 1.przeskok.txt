@@ -1,0 +1,17 @@
+start = int(input('Podaj pocz¹tek zakresu: '))
+stop = int(input('Podaj koniec zakresu: '))
+jump = int(input('Podaj przeskok: '))
+
+
+for i in range(start, stop):
+    print(start)
+    start += jump
+    if start >= stop:
+        break
+
+# Napisz program, który wypisuje liczby od START do STOP w kroku zadanym przez
+# u¿ytkownika. Umo¿liw u¿ytkownikowi wprowadzenie liczby pocz¹tkowej, liczby
+# koñcowej i wielkoœci odstêpu miêdzy kolejnymi liczbami.
+
+
+

@@ -1,0 +1,37 @@
+import random
+
+print("GRA 'Wylosuj slowo'")
+
+SLOWA = ("programowanie", "studia", "student")
+slowo = random.choice(SLOWA)
+
+dlugosc_slowa = len(slowo)
+print("Dlugosc slowa, to: ", dlugosc_slowa)
+
+print("Masz 5 podpowiedzi do wykorzystania")
+licznik = 5
+x = 5
+for _ in range(x):
+    lista = input("Podaj litere: ")
+    if lista in slowo:
+        print("tak")
+        licznik -= 1
+        print("Liter do wykorzystania: ", licznik)
+        range(x - 1)
+    else:
+        print("nie")
+        licznik -= 1
+        print("Liter do wykorzystania: ", licznik)
+        range(x - 1)
+if licznik == 0:
+    lista = input("Wyczerpa³eœ iloœæ podpowiedzi, podaj s³owo: ")
+    if lista == slowo:
+        print("Gratulacje odnalaz³eœ poprawne s³owo")
+    else:
+        print("Nie uda³o ci siê odgadn¹æ s³ow¹")
+
+# Utwórz grê, w której komputer wybiera losowo s³owo, które gracz musi
+# odgadn¹æ. Komputer informuje gracza, ile liter znajduje siê w wybranym
+# s³owie. Nastêpnie gracz otrzymuje piêæ szans na zadanie pytania, czy jakaœ litera
+# jest zawarta w tym s³owie. Komputer mo¿e odpowiedzieæ tylko „tak” lub „nie”.
+# Potem gracz musi odgadn¹æ s³owo.

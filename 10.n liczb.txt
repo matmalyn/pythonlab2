@@ -1,0 +1,50 @@
+n = int(input('Podaj  ilosc wprowadzanych liczbe : '))
+nList = []
+
+i = 1
+while i <= n:
+    c = input('Podaj liczbê:')
+    nList.append(c)
+    i += 1
+
+print("Oto lista liczb:")
+print(nList)
+
+
+print("Zawartoœæ listy ([indeks] wartoœæ):")
+for i, v in enumerate(nList):
+    print("[", i, "]", v)
+
+print("Elementy w odwróconym porz¹dku:")
+for e in reversed(nList):
+    print(e, end=" ")
+
+print()
+print("Elementy posortowane rosn¹co:")
+for e in sorted(nList):
+    print(e, end=" ")
+
+print("Usuniecie elementu ")
+toDelete = input("Który element usunac?:")
+nList.remove(toDelete)
+print(nList)
+
+print("Wyszukiwanie i zliczanie elementu w liœcie")
+e = int(input("Podaj liczbê: "))
+print("Liczba wyst¹pieñ: ")
+print(nList.count(e))
+print("Indeks pierwszego wyst¹pienia: ")
+if nList.count(e):
+    print(nList.index(e))
+else:
+    print("Brak elementu w liœcie")
+
+# Pobierz od u¿ytkownika n liczb i zapisz je w liœcie. Wydrukuj:
+# 1. elementy listy i ich indeksy,
+# 2. elementy w odwrotnej kolejnoœci,
+# 3. posortowane elementy.
+# 4. Usuñ z listy pierwsze wyst¹pienie elementu podanego przez u¿ytkownika.
+# 5. Usuñ z listy element o podanym indeksie.
+# 6. Podaj iloœæ wyst¹pieñ oraz indeks pierwszego wyst¹pienia podanego elementu.
+# 7. Wybierz z listy elementy od indeksu i do j.
+

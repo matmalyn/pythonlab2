@@ -1,0 +1,24 @@
+KLUCZ = 3
+
+def szyfruj(txt):
+    zaszyfrowny = ""
+    for i in range(len(txt)):
+        if ord(txt[i]) > 122 - KLUCZ:
+            zaszyfrowny += chr(ord(txt[i]) + KLUCZ - 26)
+        else:
+            zaszyfrowny += chr(ord(txt[i]) + KLUCZ)
+    return zaszyfrowny
+
+
+def main(args):
+    tekst = input("Podaj ci¹g do zaszyfrowania:\n")
+    print("Ci¹g zaszyfrowany:\n", szyfruj(tekst))
+    return 0
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main(sys.argv))
+
+
+#Napisz program, który podany przez u¿ytkownika ci¹g znaków szyfruje przy u¿yciu szyfru Cezara i wyœwietla zaszyfrowany tekst.

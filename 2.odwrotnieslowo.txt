@@ -1,0 +1,7 @@
+print("Wpisz s³owo, które ma zostaæ wyœwietlone w odwrotnej kolejnoœci:")
+x = input()
+l_x = len(x)
+for i in range(l_x, 0, -1):
+    print(x[::-1])
+
+#Utwórz program, który wczytuje komunikat u¿ytkownika, a nastêpnie wypisuje go w odwrotnej kolejnoœci
